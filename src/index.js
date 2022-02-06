@@ -1,11 +1,22 @@
 module.exports = function reverse(n) {
-    return (
-        parseFloat(
-            n.toString(),
-            n.split(''),
-            n.reverse(),
-            n.join('')
-        ) * Math.sign(n)
-    )
-
+    if (n > 0) {
+        return (
+            parseFloat(
+                n
+                    .toString()
+                    .split('')
+                    .reverse()
+                    .join('')
+            ) * Math.sign(n))
+    } else {
+        return (-Math.abs(n),
+            parseFloat(
+                n
+                    .toString()
+                    .split('')
+                    .reverse()
+                    .join('')
+            ) * Math.sign(n) * -1);
+    }
 }
+
